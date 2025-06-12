@@ -1,0 +1,20 @@
+#lang racket
+(define (Apuesta)
+  (display "¿Cuánto quieres apostar? ")
+  (define cantidad (read))
+  cantidad)
+(define (Doblenada)
+  (if (= (random 2) 0)
+      "DOBLE"
+      "NADA"))
+(define (Jugar)
+  (define apuesta (Apuesta)) 
+  (define resultado (Doblenada))
+
+  (if (equal? resultado "DOBLE")
+      (begin
+        (displayln "¡GANASTE!")
+        (displayln (string-append "Ahora tienes: $" (number->string (* apuesta 2)))))
+      (displayln "¡PERDISTE TODO!")))
+
+

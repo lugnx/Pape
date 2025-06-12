@@ -1,0 +1,8 @@
+#lang racket
+(define (num_intervalos)
+  (display "Ingresa un número: ") 
+  (define num_ingresado (read))   
+
+  (if (and (>= num_ingresado 1) (<= num_ingresado 3)) 
+      (display "El número está en el intervalo")       
+      (display "El número NO está en el intervalo")))  

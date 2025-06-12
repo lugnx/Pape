@@ -1,0 +1,12 @@
+#lang racket
+(define (calcular-porcentaje deposito)
+  (cond
+    [(<= deposito 50000) 4]
+    [(<= deposito 250000) 4.5]
+    [else 5]))
+
+(display "Ingresa el monto del depósito: ")  ; Pide el dato al usuario
+(define deposito (read))                      ; Lee el número ingresado
+
+(display " El porcentaje asignado es: ")
+(display (calcular-porcentaje deposito))      ; Muestra el resultado

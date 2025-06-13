@@ -13,9 +13,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '22'
-    - name: Install dependencies
+    - name: Install backend dependencies
+      working-directory: ./backend
       run: npm install
-      working-directory: ./papelera-back/backend
     - name: Copy frontend files
       run: cp -r ../frontend/* .
       working-directory: ./papelera-back/backend

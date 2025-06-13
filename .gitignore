@@ -1,0 +1,8 @@
+node_modules/
+*.rar
+*.tar.gz
+*.deb
+menagerie-db/
+sakila-db/
+prolog/
+racket/
